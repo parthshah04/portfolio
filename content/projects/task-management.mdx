@@ -1,0 +1,91 @@
+---
+title: "Task Management App"
+role: "Full Stack Developer"
+year: "2024"
+tech: ["React", "Node.js", "Socket.io", "MongoDB"]
+live: "https://task-manager-demo.example.com"
+repo: "https://github.com/yourusername/task-management"
+images: [
+  "https://picsum.photos/800/600?random=4",
+  "https://picsum.photos/800/600?random=5",
+  "https://picsum.photos/800/600?random=6"
+]
+---
+
+# Task Management Application
+
+A collaborative task management application with real-time updates and team features.
+
+## Overview
+
+This project showcases the implementation of real-time features in a modern web application. The platform enables teams to:
+
+- Create and assign tasks
+- Track progress in real-time
+- Collaborate through comments
+- Set deadlines and priorities
+- Generate progress reports
+
+## Technical Implementation
+
+The application uses a modern tech stack with real-time capabilities:
+
+\`\`\`typescript
+// Real-time task updates
+socket.on('taskUpdate', (task) => {
+  updateTaskInStore(task);
+  showNotification('Task updated');
+});
+
+// Task creation with optimistic updates
+async function createTask(task: Task) {
+  const optimisticTask = { ...task, id: 'temp-' + Date.now() };
+  updateStore(optimisticTask);
+  
+  try {
+    const response = await api.post('/tasks', task);
+    updateStore(response.data);
+  } catch (error) {
+    revertStore(optimisticTask);
+    showError('Failed to create task');
+  }
+}
+\`\`\`
+
+## Key Features
+
+1. **Real-time Collaboration**
+   - WebSocket integration with Socket.io
+   - Optimistic UI updates
+   - Conflict resolution
+   - Presence indicators
+
+2. **Task Management**
+   - Drag-and-drop interface
+   - Custom task statuses
+   - Priority levels
+   - Due date tracking
+
+3. **Team Features**
+   - Role-based access control
+   - Team workspaces
+   - Activity logging
+   - Performance metrics
+
+## Challenges & Solutions
+
+The main challenge was implementing real-time synchronization across multiple clients. We solved this by:
+
+1. Using WebSocket for real-time updates
+2. Implementing optimistic UI updates
+3. Adding conflict resolution strategies
+4. Using Redis for pub/sub messaging
+
+## Results
+
+The application has achieved:
+
+- 99.9% uptime
+- < 100ms real-time update latency
+- 50,000+ active users
+- 4.8/5 user satisfaction rating 

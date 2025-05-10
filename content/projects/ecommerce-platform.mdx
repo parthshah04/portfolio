@@ -1,0 +1,79 @@
+---
+title: "E-commerce Platform"
+role: "Full Stack Developer"
+year: "2024"
+tech: ["Next.js", "TypeScript", "Stripe", "Tailwind CSS"]
+live: "https://ecommerce-demo.example.com"
+repo: "https://github.com/yourusername/ecommerce-platform"
+images: [
+  "https://picsum.photos/800/600?random=1",
+  "https://picsum.photos/800/600?random=2",
+  "https://picsum.photos/800/600?random=3"
+]
+---
+
+# E-commerce Platform
+
+A modern e-commerce platform built with Next.js 14, featuring a seamless shopping experience and robust backend integration.
+
+## Overview
+
+This project demonstrates the power of Next.js 14 in building a full-featured e-commerce platform. The application includes:
+
+- Server-side rendering for optimal SEO
+- Real-time inventory management
+- Secure payment processing with Stripe
+- Responsive design for all devices
+- Advanced search and filtering
+- User authentication and profiles
+
+## Technical Implementation
+
+The platform is built using a modern tech stack:
+
+\`\`\`typescript
+// Example of product fetching
+async function getProducts() {
+  const products = await prisma.product.findMany({
+    include: {
+      category: true,
+      images: true,
+    },
+  });
+  return products;
+}
+\`\`\`
+
+## Key Features
+
+1. **Performance Optimized**
+   - Server Components for faster page loads
+   - Image optimization with next/image
+   - Efficient data fetching patterns
+
+2. **Secure Payments**
+   - Stripe integration for secure transactions
+   - Webhook handling for payment events
+   - Order management system
+
+3. **User Experience**
+   - Smooth animations with Framer Motion
+   - Responsive design with Tailwind CSS
+   - Accessible components with shadcn/ui
+
+## Challenges & Solutions
+
+One of the main challenges was implementing real-time inventory updates. We solved this by:
+
+1. Using WebSocket connections for live updates
+2. Implementing optimistic UI updates
+3. Adding fallback mechanisms for offline support
+
+## Results
+
+The platform has achieved:
+
+- 95+ Lighthouse performance score
+- 99.9% uptime
+- 50% reduction in page load times
+- 40% increase in conversion rate 
