@@ -4,6 +4,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { ArrowLeft, Calendar, User } from "lucide-react"
 import { blogPosts } from "@/data/blog-posts"
+import ReactMarkdown from "react-markdown"
+import remarkGfm from "remark-gfm"
 
 interface BlogPostPageProps {
   params: {
@@ -77,29 +79,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
         </header>
 
         <div className="prose dark:prose-invert max-w-none">
-          {post.content.split("\n").map((paragraph, index) => {
-            if (paragraph.startsWith("##")) {
-              return (
-                <h2 key={index} className="text-2xl font-bold mt-8 mb-4">
-                  {paragraph.replace("##", "").trim()}
-                </h2>
-              )
-            }
-            if (paragraph.startsWith("-")) {
-              return (
-                <ul key={index} className="list-disc pl-6 my-4">
-                  <li>{paragraph.replace("-", "").trim()}</li>
-                </ul>
-              )
-            }
-            if (paragraph.startsWith("```")) {
-              return null // Skip code block markers
-            }
-            if (paragraph.trim() === "") {
-              return <br key={index} />
-            }
-            return <p key={index} className="my-4">{paragraph}</p>
-          })}
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>{post.content}</ReactMarkdown>
         </div>
 
         <div className="mt-8 flex flex-wrap gap-2">

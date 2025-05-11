@@ -1,0 +1,103 @@
+<svg viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Styles and Gradients -->
+  <defs>
+    <linearGradient id="clientGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6EE7B7" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <linearGradient id="gatewayGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#93C5FD" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <linearGradient id="cryptoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A78BFA" />
+      <stop offset="100%" stop-color="#8B5CF6" />
+    </linearGradient>
+    <linearGradient id="storageGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDBA74" />
+      <stop offset="100%" stop-color="#F97316" />
+    </linearGradient>
+    <linearGradient id="vaultGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FCA5A5" />
+      <stop offset="100%" stop-color="#EF4444" />
+    </linearGradient>
+    
+    <!-- Arrow Markers -->
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#1F2937" />
+    </marker>
+    
+    <!-- Drop Shadow -->
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="5" flood-opacity="0.2" />
+    </filter>
+  </defs>
+  
+  <!-- Title -->
+  <text x="450" y="50" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="#1F2937">System Architecture at 10,000 ft</text>
+  
+  <!-- Client -->
+  <g transform="translate(150, 100)">
+    <rect x="0" y="0" width="120" height="60" rx="10" ry="10" fill="url(#clientGradient)" filter="url(#shadow)" />
+    <text x="60" y="38" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="white">Client</text>
+  </g>
+  
+  <!-- Upload Path -->
+  <g>
+    <line x1="270" y1="130" x2="350" y2="130" stroke="#1F2937" stroke-width="2" marker-end="url(#arrowhead)" />
+    <text x="310" y="120" text-anchor="middle" font-family="Arial" font-size="14" fill="#4B5563">/upload</text>
+  </g>
+  
+  <!-- Gateway API -->
+  <g transform="translate(350, 100)">
+    <rect x="0" y="0" width="240" height="80" rx="10" ry="10" fill="url(#gatewayGradient)" filter="url(#shadow)" />
+    <text x="120" y="35" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="white">Gateway API</text>
+    <text x="120" y="60" text-anchor="middle" font-family="Arial" font-size="14" fill="white">(Spring Boot)</text>
+  </g>
+  
+  <!-- AES-GCM Path -->
+  <g>
+    <line x1="470" y1="180" x2="470" y2="230" stroke="#1F2937" stroke-width="2" marker-end="url(#arrowhead)" />
+    <text x="500" y="210" text-anchor="start" font-family="Arial" font-size="14" fill="#4B5563">AES-GCM</text>
+  </g>
+  
+  <!-- Crypto Service -->
+  <g transform="translate(350, 230)">
+    <rect x="0" y="0" width="240" height="80" rx="10" ry="10" fill="url(#cryptoGradient)" filter="url(#shadow)" />
+    <text x="120" y="45" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="white">Crypto Service</text>
+  </g>
+  
+  <!-- RSA Path to KeyVault -->
+  <g>
+    <line x1="590" y1="270" x2="680" y2="270" stroke="#1F2937" stroke-width="2" marker-end="url(#arrowhead)" />
+    <text x="635" y="255" text-anchor="middle" font-family="Arial" font-size="14" fill="#4B5563">RSA</text>
+  </g>
+  
+  <!-- KeyVault -->
+  <g transform="translate(680, 230)">
+    <rect x="0" y="0" width="160" height="80" rx="10" ry="10" fill="url(#vaultGradient)" filter="url(#shadow)" />
+    <text x="80" y="35" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="white">KeyVault</text>
+    <text x="80" y="60" text-anchor="middle" font-family="Arial" font-size="14" fill="white">(HashiCorp)</text>
+  </g>
+  
+  <!-- Path to Object Store -->
+  <g>
+    <line x1="470" y1="310" x2="470" y2="380" stroke="#1F2937" stroke-width="2" marker-end="url(#arrowhead)" />
+  </g>
+  
+  <!-- Object Store -->
+  <g transform="translate(350, 380)">
+    <rect x="0" y="0" width="240" height="80" rx="10" ry="10" fill="url(#storageGradient)" filter="url(#shadow)" />
+    <text x="120" y="35" text-anchor="middle" font-family="Arial" font-size="16" font-weight="bold" fill="white">Object Store</text>
+    <text x="120" y="60" text-anchor="middle" font-family="Arial" font-size="14" fill="white">(MinIO / S3)</text>
+  </g>
+  
+  <!-- Notes and Explanations -->
+  <g transform="translate(100, 500)">
+    <text x="0" y="0" font-family="Arial" font-size="16" font-weight="bold" fill="#1F2937">Flow:</text>
+    <text x="0" y="25" font-family="Arial" font-size="14" fill="#4B5563">1. Client uploads data to the Gateway API</text>
+    <text x="0" y="50" font-family="Arial" font-size="14" fill="#4B5563">2. Gateway API passes data to Crypto Service for encryption with AES-GCM</text>
+    <text x="0" y="75" font-family="Arial" font-size="14" fill="#4B5563">3. Crypto Service uses RSA keys from HashiCorp Vault for key management</text>
+    <text x="0" y="100" font-family="Arial" font-size="14" fill="#4B5563">4. Encrypted data is stored in Object Store (MinIO/S3)</text>
+  </g>
+</svg>
