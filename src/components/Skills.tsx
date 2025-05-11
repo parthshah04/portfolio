@@ -12,43 +12,108 @@ import {
 
 const skills = [
   {
-    category: "Frontend",
-    icon: Code2,
+    category: "Programming Languages",
+    icon: Type,
     items: [
-      { name: "React", level: 90 },
-      { name: "Next.js", level: 85 },
-      { name: "TypeScript", level: 88 },
-      { name: "Tailwind CSS", level: 92 },
+      "JavaScript", "TypeScript", "Python", "Java", "C++", "C", "PHP", "Solidity", "SQL", "HTML", "CSS"
     ],
   },
   {
-    category: "Backend",
+    category: "Frameworks & Libraries (Backend / APIs)",
     icon: Server,
     items: [
-      { name: "Node.js", level: 85 },
-      { name: "Express", level: 82 },
-      { name: "PostgreSQL", level: 78 },
-      { name: "MongoDB", level: 80 },
+      "Java Spring Boot", "Spring MVC", "Node.js", "Express.js", "Django", "Apollo GraphQL", "Convex"
     ],
   },
   {
-    category: "DevOps",
+    category: "Frameworks & Libraries (Frontend / UI)",
+    icon: Code2,
+    items: [
+      "React.js", "React Native", "Next.js", "Angular", "AngularJS", "Tailwind CSS", "Shadcn UI", "React Hook Form"
+    ],
+  },
+  {
+    category: "Mobile",
+    icon: Code2,
+    items: [
+      "Android (Kotlin/Java)", "Android Neural Networks API"
+    ],
+  },
+  {
+    category: "Architecture & Design",
+    icon: Database,
+    items: [
+      "Microservices", "PWA", "Offline‑First Design", "Solution Architecture", "Metadata‑Driven Frameworks"
+    ],
+  },
+  {
+    category: "Cloud & Infrastructure",
+    icon: Server,
+    items: [
+      "AWS (Lambda, S3)", "Azure", "Google Cloud Platform", "Vercel", "DigitalOcean", "Docker", "Kubernetes", "Containerization"
+    ],
+  },
+  {
+    category: "CI/CD & Build Tools",
     icon: Terminal,
     items: [
-      { name: "Docker", level: 75 },
-      { name: "AWS", level: 70 },
-      { name: "CI/CD", level: 80 },
-      { name: "Linux", level: 85 },
+      "Git", "GitHub", "Maven", "NPM/Yarn", "CI/CD (GitHub Actions, Jenkins)"
     ],
   },
   {
-    category: "Tools",
+    category: "Messaging & Streaming",
     icon: Webhook,
     items: [
-      { name: "Git", level: 90 },
-      { name: "VS Code", level: 95 },
-      { name: "Figma", level: 75 },
-      { name: "Postman", level: 85 },
+      "Apache Kafka", "WebSockets", "Event‑Driven Architecture"
+    ],
+  },
+  {
+    category: "Databases & Storage",
+    icon: Database,
+    items: [
+      "MongoDB", "PostgreSQL", "MySQL", "JSON file‑based storage", "IPFS"
+    ],
+  },
+  {
+    category: "Blockchain & Web3",
+    icon: Code2,
+    items: [
+      "Ethereum", "Binance Smart Chain (BSC)", "Polygon", "Solidity", "Hardhat", "Chainlink", "Ethers.js", "web3.js", "DeFi", "Dex", "NFTs", "ICOs", "Custom Crypto Modules"
+    ],
+  },
+  {
+    category: "Authentication & Security",
+    icon: Terminal,
+    items: [
+      "OAuth 2.0", "JWT", "AES‑256 & RSA encryption", "HTTPS", "Smart‑contract audit best practices", "Data‑privacy compliance"
+    ],
+  },
+  {
+    category: "Integrations & APIs",
+    icon: Webhook,
+    items: [
+      "Google Maps API", "Google Sign‑In", "OpenAI API", "Plaid", "Yodlee", "SaltEdge", "OSINT APIs"
+    ],
+  },
+  {
+    category: "Data Science & AI/ML",
+    icon: Database,
+    items: [
+      "ARIMA & time‑series modeling", "ETL pipelines", "XGBoost", "VGG‑19", "Model quantization", "Vector search", "TensorFlow", "PyTorch"
+    ],
+  },
+  {
+    category: "Operating Systems & Platforms",
+    icon: Terminal,
+    items: [
+      "Linux (Ubuntu, CentOS)", "Windows", "macOS"
+    ],
+  },
+  {
+    category: "Methodologies & Soft Skills",
+    icon: Terminal,
+    items: [
+      "Agile/Scrum", "Teamwork", "Leadership", "Communication", "Critical Thinking", "Creativity", "Strategic Planning", "Business Strategy", "Process & Project Management"
     ],
   },
 ]
@@ -65,7 +130,7 @@ export function Skills() {
           className="max-w-5xl mx-auto"
         >
           <h2 className="text-3xl font-bold mb-12 text-center">Skills</h2>
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
             {skills.map((skillGroup, index) => (
               <motion.div
                 key={skillGroup.category}
@@ -73,31 +138,20 @@ export function Skills() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="p-6 rounded-lg bg-background border"
+                className="p-8 rounded-xl bg-background border shadow-sm w-full"
               >
                 <div className="flex items-center gap-3 mb-6">
                   <skillGroup.icon className="h-6 w-6 text-primary" />
                   <h3 className="text-xl font-semibold">{skillGroup.category}</h3>
                 </div>
-                <div className="space-y-4">
+                <div className="flex flex-wrap gap-2">
                   {skillGroup.items.map((skill) => (
-                    <div key={skill.name}>
-                      <div className="flex justify-between mb-1">
-                        <span className="text-sm font-medium">{skill.name}</span>
-                        <span className="text-sm text-muted-foreground">
-                          {skill.level}%
-                        </span>
-                      </div>
-                      <div className="h-2 rounded-full bg-muted">
-                        <motion.div
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${skill.level}%` }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 1, delay: 0.2 }}
-                          className="h-full rounded-full bg-primary"
-                        />
-                      </div>
-                    </div>
+                    <span
+                      key={skill}
+                      className="inline-flex items-center rounded-full border px-3 py-1 text-xs font-medium bg-muted text-foreground border-border hover:bg-primary/10 transition-colors"
+                    >
+                      {skill}
+                    </span>
                   ))}
                 </div>
               </motion.div>

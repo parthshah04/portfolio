@@ -39,7 +39,7 @@ export function Navbar() {
       audio.pause()
       audio.currentTime = 0
     }
-  }, [isAudioPlaying])
+  }, [isAudioPlaying, setIsAudioPlaying])
 
   if (!mounted) return null
 

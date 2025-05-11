@@ -7,10 +7,12 @@ import { useEffect, useState } from "react"
 import { WavyRing } from "@/components/WavyRing"
 
 export const TYPED_STRINGS = [
-  "A pragmatic Fullstack Developer",
-  "I build things for the web",
-  "I create aesthetic and modern apps",
-]
+  "A Startup-seasoned full-stack dev..!!!",
+  "I turn ideas into elegant, high-impact web & cloud apps",
+  "Lifelong learner who thrives on change and new tech!",
+  "Collaborative problem-solver delivering data-driven results",
+  "Passionate about building accessible, AI-powered experiences"
+];
 
 export function Hero() {
   const [current, setCurrent] = useState(0)
@@ -88,10 +90,10 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="flex justify-center gap-6 mt-8"
         >
-          <Link href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+          <Link href="https://github.com/parthshah04" target="_blank" rel="noopener noreferrer">
             <Github className="h-6 w-6 text-muted-foreground hover:text-foreground transition-colors" />
           </Link>
-          <Link href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
+          <Link href="https://www.linkedin.com/in/parth-shah-72822816b/" target="_blank" rel="noopener noreferrer">
             <Linkedin className="h-6 w-6 text-muted-foreground hover:text-foreground transition-colors" />
           </Link>
         </motion.div>

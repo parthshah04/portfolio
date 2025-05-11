@@ -94,8 +94,7 @@
 //   )
 // } 
 
-/* eslint-disable @typescript-eslint/no-unused-expressions */
-"use client";                               // ✅ semicolon stops “unused-expression” error
+"use client";                               // ✅ semicolon stops "unused-expression" error
 
 import { useRef, useEffect } from "react"
 import { useTheme } from "next-themes"
@@ -151,7 +150,7 @@ export function WavyRing({
       ctx.globalCompositeOperation = blendMode
 
       const baseRadius = Math.min(w, h) * 0.40
-      const now = performance.now() * speed/20;
+      const now = performance.now() * speed/40;
 
       for (let l = 0; l < layers; l++) {
         ctx.beginPath()
@@ -163,7 +162,11 @@ export function WavyRing({
           const r = baseRadius + ripple * amplitude
           const x = Math.cos(θ) * r
           const y = Math.sin(θ) * r
-          i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y)
+          if (i === 0) {
+            ctx.moveTo(x, y)
+          } else {
+            ctx.lineTo(x, y)
+          }
         }
         ctx.closePath()
         ctx.shadowColor = shadowColor

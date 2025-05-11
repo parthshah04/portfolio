@@ -20,13 +20,18 @@ export default function ProjectsPage() {
             className="group relative overflow-hidden rounded-lg bg-card text-card-foreground shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1"
           >
             <div className="relative aspect-video overflow-hidden">
-              <Image
-                src={project.images[0]}
-                alt={project.title}
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-110"
-                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
-              />
+              {(() => {
+                const firstImage = project.images.find(img => typeof img === "string") as string | undefined;
+                return firstImage ? (
+                  <Image
+                    src={firstImage}
+                    alt={project.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                  />
+                ) : null;
+              })()}
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
             <div className="p-4 relative">

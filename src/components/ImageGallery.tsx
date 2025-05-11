@@ -5,8 +5,9 @@ import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 
+type GalleryImage = string | { type: "video"; url: string }
 interface ImageGalleryProps {
-  images: string[]
+  images: GalleryImage[]
   title: string
 }
 
@@ -45,13 +46,39 @@ export function ImageGallery({ images, title }: ImageGalleryProps) {
           transition={{ duration: 0.5 }}
           className="relative w-full h-full"
         >
-          <Image
-            src={images[currentIndex]}
-            alt={`${title} - Image ${currentIndex + 1}`}
-            fill
-            className="object-cover"
-            priority
-          />
+          {typeof images[currentIndex] === "string" ? (
+            <Image
+              src={images[currentIndex] as string}
+              alt={`${title} - Image ${currentIndex + 1}`}
+              fill
+              className="object-cover"
+              priority
+            />
+          ) : (
+            (() => {
+              const videoUrl = (images[currentIndex] as { type: "video"; url: string }).url;
+              if (videoUrl.endsWith(".mp4") || videoUrl.endsWith(".webm")) {
+                return (
+                  <video
+                    src={videoUrl}
+                    controls
+                    className="w-full h-full absolute inset-0 rounded-lg object-cover"
+                    style={{ background: "#000" }}
+                  />
+                );
+              }
+              // fallback to iframe for external video links
+              return (
+                <iframe
+                  src={videoUrl}
+                  title="Video Preview"
+                  allow="autoplay; fullscreen"
+                  className="w-full h-full absolute inset-0 rounded-lg border-none"
+                  allowFullScreen
+                />
+              );
+            })()
+          )}
         </motion.div>
       </AnimatePresence>
 
@@ -73,7 +100,7 @@ export function ImageGallery({ images, title }: ImageGalleryProps) {
 
       {/* Thumbnail Navigation */}
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-        {images.map((_, index) => (
+        {images.map((img, index) => (
           <button
             key={index}
             onClick={() => {

@@ -32,13 +32,18 @@ export function ProjectsGrid() {
               >
                 <Link href={`/projects/${project.slug}`}>
                   <div className="aspect-video relative">
-                    <Image
-                      src={project.images[0]}
-                      alt={project.title}
-                      fill
-                      className="object-cover transition-transform group-hover:scale-105"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
-                    />
+                    {(() => {
+                      const firstImage = project.images.find(img => typeof img === "string") as string | undefined;
+                      return firstImage ? (
+                        <Image
+                          src={firstImage}
+                          alt={project.title}
+                          fill
+                          className="object-cover transition-transform group-hover:scale-105"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                        />
+                      ) : null;
+                    })()}
                   </div>
                   <div className="p-6">
                     <h3 className="mt-2 text-xl font-semibold group-hover:text-primary transition-colors">

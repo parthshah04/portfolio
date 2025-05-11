@@ -24,5 +24,6 @@ declare module "confetti-js" {
     settings?: ConfettiSettings
   ): ConfettiInstance
 
-  export default { create }
+  const confetti = { create }
+  export default confetti
 } 

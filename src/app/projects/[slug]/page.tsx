@@ -40,6 +40,19 @@ export async function generateMetadata({
   }
 }
 
+// Type guard to ensure images are GalleryImage[]
+function toGalleryImages(images: (string | { type: string; url: string })[]): (string | { type: "video"; url: string })[] {
+  return images
+    .map(img =>
+      typeof img === "string"
+        ? img
+        : img.type === "video"
+          ? { type: "video", url: img.url }
+          : null
+    )
+    .filter((img): img is string | { type: "video"; url: string } => img !== null);
+}
+
 export default function ProjectPage({ params }: ProjectPageProps) {
   const project = projects.find((p) => p.slug === params.slug)
 
@@ -59,7 +72,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 
       <div className="grid gap-8 md:grid-cols-2">
         <div>
-          <ImageGallery images={project.images} title={project.title} />
+          <ImageGallery images={toGalleryImages(project.images)} title={project.title} />
         </div>
 
         <div>
@@ -82,24 +95,28 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           </div>
 
           <div className="flex gap-4">
-            <Link
-              href={project.repo}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center text-muted-foreground hover:text-foreground"
-            >
-              <Github className="mr-2 h-4 w-4" />
-              View Source
-            </Link>
-            <Link
-              href={project.live}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center text-muted-foreground hover:text-foreground"
-            >
-              <ExternalLink className="mr-2 h-4 w-4" />
-              Live Demo
-            </Link>
+            {project.repo && (
+              <Link
+                href={project.repo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-muted-foreground hover:text-foreground"
+              >
+                <Github className="mr-2 h-4 w-4" />
+                View Source
+              </Link>
+            )}
+            {project.live && (
+              <Link
+                href={project.live}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-muted-foreground hover:text-foreground"
+              >
+                <ExternalLink className="mr-2 h-4 w-4" />
+                Live Demo
+              </Link>
+            )}
           </div>
         </div>
       </div>
