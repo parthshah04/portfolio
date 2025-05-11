@@ -1,75 +1,138 @@
-# Personal Portfolio Website
+# 🚀 Personal Portfolio Website
 
-A modern, responsive portfolio website built with Next.js 14, TypeScript, Tailwind CSS, and Framer Motion.
+[Live Portfolio](https://parthshah.co.in) • [GitHub Repo](https://github.com/parthshah04/portfolio.git)
 
-## Features
+---
 
-- 🎨 Modern and clean design
-- 🌓 System-aware theme toggle
-- 🎵 Background music with controls
-- 📱 Fully responsive
-- ⚡ Optimized performance
-- ♿ Accessibility focused
-- 📝 Blog engine
-- 🎯 Project showcase
-- 📊 Skills visualization
-- 📅 Experience timeline
+## ✨ Overview
 
-## Tech Stack
+Welcome to my personal portfolio! This is a modern, interactive, and fully responsive portfolio website built with **Next.js 14**, **TypeScript**, **Tailwind CSS**, and **Framer Motion**. It showcases my projects, blog posts, skills, and experience, and features a beautiful design with advanced animations, a music player, and more.
 
-- Next.js 14
-- TypeScript
-- Tailwind CSS
-- Framer Motion
-- Lucide Icons
-- Radix UI
-- Next Themes
+---
 
-## Getting Started
+## 🛠️ Features
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/portfolio.git
-   cd portfolio
-   ```
+- **Modern, Clean UI** – Beautiful, accessible, and responsive design
+- **Dark/Light Theme** – System-aware theme toggle
+- **Animated Hero & Background** – Wavy ring, typewriter, and music-reactive visuals
+- **Persistent Audio Player** – Enjoy music as you browse
+- **Project Showcase** – Filterable, interactive project cards with image/video support
+- **Blog Engine** – MDX-powered, with search, tags, and rich markdown rendering
+- **Skills & Experience** – Categorized, visually appealing chips and timeline
+- **SEO & PWA Ready** – Optimized for search and installable on devices
+- **Contact Form** – EmailJS-powered, send messages directly from the site
+- **Deployed on Vercel** – Fast, global, and production-ready
 
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+---
 
-3. Run the development server:
-   ```bash
-   npm run dev
-   ```
+## 🧑‍💻 Tech Stack
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+- [Next.js 14](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [Lucide Icons](https://lucide.dev/)
+- [Radix UI](https://www.radix-ui.com/)
+- [EmailJS](https://www.emailjs.com/) (Contact form)
+- [Vercel](https://vercel.com/) (Deployment)
 
-## Project Structure
+---
 
-```
-src/
-├── app/                 # Next.js app directory
-├── components/         # React components
-│   ├── ui/            # Reusable UI components
-│   └── ...            # Feature components
-├── lib/               # Utility functions
-└── styles/            # Global styles
+## 🚦 Getting Started
+
+### 1. **Clone the Repository**
+```bash
+git clone https://github.com/parthshah04/portfolio.git
+cd portfolio
 ```
 
-## Customization
+### 2. **Install Dependencies**
+```bash
+npm install
+```
 
-1. Update personal information in the components
-2. Modify theme colors in `globals.css`
-3. Add your projects in the ProjectsGrid component
-4. Customize the blog engine in the blog directory
+### 3. **Set Up Environment Variables**
+Create a `.env.local` file in the root directory and add:
+```env
+NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_emailjs_public_key
+NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_emailjs_template_id
+NEXT_PUBLIC_EMAILJS_SERVICE_ID=your_emailjs_service_id
+```
+> Get these values from your [EmailJS dashboard](https://dashboard.emailjs.com/).
 
-## Deployment
+### 4. **Run the Development Server**
+```bash
+npm run dev
+```
+Visit [http://localhost:3000](http://localhost:3000) to view your site.
 
-The site can be easily deployed to Vercel:
+---
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/yourusername/portfolio)
+## 🎨 Customization Guide
 
-## License
+Want to use this as your own portfolio? Here's how:
 
-MIT License - feel free to use this template for your own portfolio!
+1. **Update Personal Info**
+   - Edit your name, bio, social links, and contact email in the relevant components (e.g., `Hero.tsx`, `Footer.tsx`, `Contact.tsx`).
+2. **Add Your Projects**
+   - Update the `Projects` section with your own projects, images, and links.
+3. **Write Blog Posts**
+   - Add MDX files to the `content/blog/` directory or update the blog data file.
+4. **Customize Skills & Experience**
+   - Edit the skills and experience arrays to reflect your background.
+5. **Change Theme Colors**
+   - Tweak `globals.css` or Tailwind config for your preferred palette.
+6. **Replace Images**
+   - Place your own images in the `public/` folder and update paths as needed.
+7. **Update Resume**
+   - Replace `public/resume.pdf` with your own CV.
+8. **Configure Contact Form**
+   - Set up your own EmailJS account and update the `.env.local` values.
+
+---
+
+## 🚀 Deployment
+
+This site is ready to deploy on [Vercel](https://vercel.com/):
+
+1. Push your code to GitHub.
+2. Import your repo into Vercel.
+3. Add your environment variables in the Vercel dashboard.
+4. Deploy and go live!
+
+---
+
+## 🤝 Contributing
+
+Feel free to fork this repo, open issues, or submit pull requests! If you use this template, a star or mention is always appreciated.
+
+---
+
+## 🙏 Credits & Inspiration
+
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [EmailJS](https://www.emailjs.com/)
+- [Vercel](https://vercel.com/)
+- [Lucide Icons](https://lucide.dev/)
+- [Radix UI](https://www.radix-ui.com/)
+
+---
+
+## 📬 Contact
+
+- Portfolio: [parthshah.co.in](https://parthshah.co.in)
+- GitHub: [@parthshah04](https://github.com/parthshah04)
+- LinkedIn: [Parth Shah](https://www.linkedin.com/in/parth-shah-72822816b/)
+- Twitter/X: [@_ParthShah__](https://x.com/_ParthShah__)
+
+---
+
+## 📝 License
+
+MIT License. Feel free to use, modify, and share!
+
+---
+
+> Made with ❤️ by [Parth Shah](https://github.com/parthshah04)
