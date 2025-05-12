@@ -292,7 +292,7 @@ export const projects = [
       "Secure login with Google OAuth and token rotation",
       "Real-time sync powered by Convex backend",
       "Fully accessible and responsive UI (WCAG 2.1-AA compliant)",
-      "CI/CD pipeline with zero-downtime deploys on Vercel"
+      "Main app is deployed with CI/CD pipeline with zero-downtime on aws and preview app on vercel"
     ],
     challenges: [
       "Building fast and relevant AI suggestions",
