@@ -52,6 +52,8 @@ const experiences = [
         <li>Built token rewards system with staking, governance, and reward distribution.</li>
         <li>Implemented Kafka-powered monitoring for real-time blockchain transaction alerts.</li>
         <li>Partnered with security auditors for smart contract assessments—zero critical findings.</li>
+        <li>Contributed to .NET-based backend modules for internal microservices, focusing on clean architecture, async programming, and performance-focused enhancements.</li>
+        <li>Collaborated on .NET performance tuning using dotMemory, AppDynamics, and JMeter—diagnosing memory leaks and bottlenecks to boost API throughput by 30%.</li>
       </ul>
     ),
   },

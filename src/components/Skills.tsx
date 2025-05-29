@@ -15,7 +15,7 @@ const skills = [
     category: "Programming Languages",
     icon: Type,
     items: [
-      "JavaScript", "TypeScript", "Python", "Java", "C++", "C", "PHP", "Solidity", "SQL", "HTML", "CSS"
+      "JavaScript", "TypeScript","C#​ ​(​.​NET)​", "Python", "Java", "C++", "C", "PHP", "Solidity", "SQL", "HTML", "CSS"
     ],
   },
   {
@@ -85,7 +85,7 @@ const skills = [
     category: "Authentication & Security",
     icon: Terminal,
     items: [
-      "OAuth 2.0", "JWT", "AES‑256 & RSA encryption", "HTTPS", "Smart‑contract audit best practices", "Data‑privacy compliance"
+      "OAuth 2.0", "JWT", "AES‑256 & RSA encryption", "HTTPS", "TDD", "​dotTrace", "​dotMemory", "​AppDynamics", "​Mocha", "Jest", "Smart‑contract audit best practices", "Data‑privacy compliance"
     ],
   },
   {
