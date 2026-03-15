@@ -17,12 +17,12 @@ export function About() {
           <h2 className="text-3xl font-bold mb-8">About Me</h2>
           <div className="prose prose-lg dark:prose-invert">
             <p>
-            I’m a software developer shaped by fast-paced startup environments—where I’ve worked on both product-driven platforms and service-based solutions. I thrive in lean teams where everyone rallies behind a shared goal, and I’ve come to value simple solutions to real problems over shiny features.
+            I’m a software developer shaped by fast-paced startup environments-where I’ve worked on both product-driven platforms and service-based solutions. I thrive in lean teams where everyone rallies behind a shared goal, and I’ve come to value simple solutions to real problems over shiny features.
             I often describe myself as a lifelong learner and problem solver, because that’s what the job really is: constant adaptation, curiosity, and iteration. I bring a results-focused mindset, always aiming for clean code, user-first experiences, and measurable outcomes.
             </p>
             <br />
             <p>
-            Outside of work, I’m often lost in tech blogs, sketching out random app ideas, or automating my home just for fun—sometimes it’s productive, sometimes it’s just chaos I enjoy.
+            Outside of work, I’m often lost in tech blogs, sketching out random app ideas, or automating my home just for fun-sometimes it’s productive, sometimes it’s just chaos I enjoy.
             </p>
           </div>
 
@@ -38,7 +38,7 @@ export function About() {
               <div>
                 <h3 className="text-lg font-semibold mb-2">Fun Fact</h3>
                 <p className="text-muted-foreground">
-                People joke that AI will code us out of a job; I’m busy letting it lint my pull requests and draft test cases so I can focus on tougher problems—proof that the best way to face disruption is to harness it.
+                People joke that AI will code us out of a job; I’m busy letting it lint my pull requests and draft test cases so I can focus on tougher problems-proof that the best way to face disruption is to harness it.
                 </p>
               </div>
             </div>

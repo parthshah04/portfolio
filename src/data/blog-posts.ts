@@ -18,7 +18,7 @@ export const blogPosts: BlogPost[] = [
     slug: "shipping-fast-lean-teams",
     title: "Shipping Fast in Lean Startup Teams",
     description:
-      "Field-tested tactics for delivering product and service features at startup speed—without melting down your team or your codebase.",
+      "Field-tested tactics for delivering product and service features at startup speed-without melting down your team or your codebase.",
     date: "2024-04-11",
     author: "Parth Shah",
     tags: ["Startups", "Lean", "Engineering Culture"],
@@ -36,7 +36,7 @@ In a five-person startup you **can't hide behind process**. Every line of code s
 ## Why Speed Matters
 
 1. **Market fog**  
-   Until users pay—or churn—you're guessing. Fast releases shorten that feedback loop.  
+   Until users pay-or churn-you're guessing. Fast releases shorten that feedback loop.  
 2. **Resource reality**  
    Startups run on burn-rate; every sprint of unvalidated work is cash on fire.  
 3. **Team motivation**  
@@ -60,7 +60,7 @@ In tiny teams, Dev, Sec, and Ops are just hats you swap. The same engineer who m
 
 ### 4. **Embrace intentional technical debt**  
 
-Speed *requires* shortcuts—just record *why* you took them and set a sunset date. Holding debt reviews every second sprint keeps the snowball small.
+Speed *requires* shortcuts-just record *why* you took them and set a sunset date. Holding debt reviews every second sprint keeps the snowball small.
 
 ---
 
@@ -72,7 +72,7 @@ Speed *requires* shortcuts—just record *why* you took them and set a sunset da
 | **Feature flags (GrowthBook / LaunchDarkly / DIY in DB)** | Ship dormant code, test in prod with 1 % traffic, roll back by toggling. |
 | **Static typing + linting (TypeScript, ESLint)** | Fewer bugs slip into Friday-night deploys. |
 | **Observability (OpenTelemetry + Grafana)** | When an error budget blows, you *see* which slice caused it. |
-| **Infra-as-Code (Pulumi / Terraform)** | New environment in minutes—critical when a client demo appears tomorrow. |
+| **Infra-as-Code (Pulumi / Terraform)** | New environment in minutes-critical when a client demo appears tomorrow. |
 
 ---
 
@@ -117,7 +117,7 @@ Lean teams thrive when **learning loops outpace market shifts**. If that means o
 
 ---
 
-> **TL;DR**: Ship in vertical slices, guard quality with automation, measure impact fast, and treat debt like a sprint-planning citizen. That's how tiny crews punch above their weight—and have fun doing it.
+> **TL;DR**: Ship in vertical slices, guard quality with automation, measure impact fast, and treat debt like a sprint-planning citizen. That's how tiny crews punch above their weight-and have fun doing it.
 `)
   },
   {
@@ -135,7 +135,7 @@ Lean teams thrive when **learning loops outpace market shifts**. If that means o
     content: dedent(`
 ## Will AI Take Our Jobs? How I Use It to Code Faster Instead
 
-Every tech cycle births a prophecy about developers becoming obsolete. Yet here we are—still shipping code—while tools like GPT-4o, Copilot, and Cody sit next to our IDEs. The question isn’t *“Will AI replace me?”* It’s *“How do I replace the parts of my job I **don’t** love with AI so I can focus on the parts I do?”*
+Every tech cycle births a prophecy about developers becoming obsolete. Yet here we are-still shipping code-while tools like GPT-4o, Copilot, and Cody sit next to our IDEs. The question isn’t *“Will AI replace me?”* It’s *“How do I replace the parts of my job I **don’t** love with AI so I can focus on the parts I do?”*
 
 ---
 
@@ -197,7 +197,7 @@ Remind me how "ArrayBuffer" works in JS?” beats tab-surfing MDN. Less context-
 
 * AI isn’t a pink slip; it’s a productivity exoskeleton.  
 * Automate the grind (boilerplate, tests), guard the craft (architecture, empathy).  
-* Track metrics—if throughput or quality doesn’t improve, tweak prompts or pull back.  
+* Track metrics-if throughput or quality doesn’t improve, tweak prompts or pull back.  
 * The best defence against job disruption is being the person who *drives* the new toolset, not the one who avoids it.
 
 > **TL;DR:** Let AI write the parts you dread, audit everything, and reinvest saved hours into design, user empathy, and the hairy problems that still need a human brain.
@@ -207,7 +207,7 @@ Remind me how "ArrayBuffer" works in JS?” beats tab-surfing MDN. Less context-
     slug: "offline-first-pwa-service-workers",
     title: "Offline-First PWAs: Field Notes from the Middle of Nowhere",
     description:
-      "Lessons learned turning a farm-management dashboard into a zero-bar survivalist—thanks to Service Workers, smart caching, and background sync.",
+      "Lessons learned turning a farm-management dashboard into a zero-bar survivalist-thanks to Service Workers, smart caching, and background sync.",
     date: "2024-06-02",
     author: "Parth Shah",
     tags: ["PWA", "Service Workers", "Performance"],
@@ -232,7 +232,7 @@ Remind me how "ArrayBuffer" works in JS?” beats tab-surfing MDN. Less context-
   ## 1 | Register the Service Worker (the Right Way)
   
   \`\`\`js
-  // public/sw.js — bare minimum
+  // public/sw.js - bare minimum
   self.addEventListener("install", (evt) =>
     evt.waitUntil(
       caches.open("static-v1").then((c) => c.addAll(["/", "/index.html", "/styles.css"]))
@@ -303,7 +303,7 @@ Remind me how "ArrayBuffer" works in JS?” beats tab-surfing MDN. Less context-
   
   ### Parting Seeds
   
-  Service Workers aren’t magic—but with a disciplined caching plan, background sync, and a good *debug story*, they turn flaky networks into a non-issue. If your users venture off the grid (literally or figuratively), building **offline-first** isn’t a luxury; it’s table stakes.
+  Service Workers aren’t magic-but with a disciplined caching plan, background sync, and a good *debug story*, they turn flaky networks into a non-issue. If your users venture off the grid (literally or figuratively), building **offline-first** isn’t a luxury; it’s table stakes.
   
   > Next stop: integrating push notifications so the app can whisper, “Sync complete!” while farmers are already on the next tractor row.
   `)
@@ -312,7 +312,7 @@ Remind me how "ArrayBuffer" works in JS?” beats tab-surfing MDN. Less context-
     slug: "saas-payment-gateway-multi-tenant",
     title: "Plugging a Payment Gateway into a Multi-Tenant SaaS (Without Losing Sleep)",
     description:
-      "Architecture choices, security traps, and a decision matrix for picking the right gateway when your platform must serve many merchants—at home and abroad.",
+      "Architecture choices, security traps, and a decision matrix for picking the right gateway when your platform must serve many merchants-at home and abroad.",
     date: "2024-08-15",
     author: "Parth Shah",
     tags: ["SaaS", "Payments", "Architecture"],
@@ -322,9 +322,9 @@ Remind me how "ArrayBuffer" works in JS?” beats tab-surfing MDN. Less context-
     content: dedent(`
   ## Why Payments Get Hairy in Multi-Tenant SaaS
 
-  In a single-tenant app, you wire Stripe keys, ship, and call it a day. In a **multi-tenant** world—think platforms like Shopify or Ghost—each merchant needs isolated ledgers, local compliance, and custom payout schedules. One mis-routed webhook can credit the wrong store and trigger a chargeback circus.
+  In a single-tenant app, you wire Stripe keys, ship, and call it a day. In a **multi-tenant** world-think platforms like Shopify or Ghost-each merchant needs isolated ledgers, local compliance, and custom payout schedules. One mis-routed webhook can credit the wrong store and trigger a chargeback circus.
 
-  I recently integrated **CC Avenue** for a SaaS serving dozens of merchants. This post captures the practical lessons—and how to decide if CC Avenue, Stripe, Razorpay, Adyen, or Braintree fits *your* roadmap.
+  I recently integrated **CC Avenue** for a SaaS serving dozens of merchants. This post captures the practical lessons-and how to decide if CC Avenue, Stripe, Razorpay, Adyen, or Braintree fits *your* roadmap.
 
   ---
 
@@ -402,9 +402,9 @@ Remind me how "ArrayBuffer" works in JS?” beats tab-surfing MDN. Less context-
 
   ### Takeaways
 
-  * **Pick your gateway like you pick a co-founder**—coverage, roadmap, and support culture matter as much as API docs.  
+  * **Pick your gateway like you pick a co-founder**-coverage, roadmap, and support culture matter as much as API docs.  
   * In multi-tenant SaaS, **isolation > convenience**. Platform models scale better than aggregators once chargebacks appear.  
-  * Secure webhooks, use idempotency keys, and store every event—payments are write-once, audit-forever.  
+  * Secure webhooks, use idempotency keys, and store every event-payments are write-once, audit-forever.  
   * Roll out behind flags, watch metrics, and remember: the best payment flow is the one users forget ever happened.
 
   > Next on my radar: adding real-time FX quotes so merchants can price in buyers' local currency without shrinking their margins.
@@ -424,10 +424,10 @@ Remind me how "ArrayBuffer" works in JS?” beats tab-surfing MDN. Less context-
     content: dedent(`
   # Why Two Keys Are Better Than One
 
-  Encrypting user files is easy—until you need **zero-trust sharing**, seamless node fail-over, and 99.9 % uptime. EnLock solves this with a *dual-layer* pipeline:
+  Encrypting user files is easy-until you need **zero-trust sharing**, seamless node fail-over, and 99.9 % uptime. EnLock solves this with a *dual-layer* pipeline:
 
-  * **AES-256 (GCM)** — fast, symmetric encryption for the file bytes  
-  * **RSA-2048** — wraps the AES key so only the owner (or a delegated reader) can decrypt it
+  * **AES-256 (GCM)** - fast, symmetric encryption for the file bytes  
+  * **RSA-2048** - wraps the AES key so only the owner (or a delegated reader) can decrypt it
 
   > TL;DR: Data moves fast under AES, keys stay safe under RSA.
 
@@ -441,7 +441,7 @@ Remind me how "ArrayBuffer" works in JS?” beats tab-surfing MDN. Less context-
 
   ---
 
-  ## 2 | Spring Boot Crypto Service — Core Snippet
+  ## 2 | Spring Boot Crypto Service - Core Snippet
 
   \`\`\`java
   // CryptoService.java
@@ -471,7 +471,7 @@ Remind me how "ArrayBuffer" works in JS?” beats tab-surfing MDN. Less context-
   2. Upload API picks the *least-loaded* node via watcher callbacks  
   3. On node death, ZooKeeper triggers a *replication rebalance* job
 
-  The encrypted file is sharded \`n=3\` across peers, each storing only AES-ciphertext—**never the key**.
+  The encrypted file is sharded \`n=3\` across peers, each storing only AES-ciphertext-**never the key**.
 
   ---
 
@@ -541,12 +541,12 @@ Remind me how "ArrayBuffer" works in JS?” beats tab-surfing MDN. Less context-
 
   ### Key Takeaways
 
-  * **Layered crypto beats single-key setups**—compromise one layer, data stays safe.  
+  * **Layered crypto beats single-key setups**-compromise one layer, data stays safe.  
   * **ZooKeeper + sharding** keeps uploads available even when a node disappears.  
   * **Hot key rotation** is possible if you separate data & key stores and version aggressively.  
   * Invest in **observability** early; crypto bugs hide in latency tails.
 
-  > Security isn’t a feature toggle—it’s architecture. Build it in from day one, and your future self (and auditors) will thank you.
+  > Security isn’t a feature toggle-it’s architecture. Build it in from day one, and your future self (and auditors) will thank you.
   `)
   },
   {
@@ -573,7 +573,7 @@ Remind me how "ArrayBuffer" works in JS?” beats tab-surfing MDN. Less context-
 
   ![Blue-Green Deployment Architecture](/images/blog/architecture.svg)
 
-  *Works the same on Cloud Run, Fly.io, or bare-metal K8s—just replace ALB with your load balancer.*
+  *Works the same on Cloud Run, Fly.io, or bare-metal K8s-just replace ALB with your load balancer.*
 
   ---
 
@@ -664,8 +664,8 @@ Remind me how "ArrayBuffer" works in JS?” beats tab-surfing MDN. Less context-
   | Resource | Blue | Green | Total / month |
   |----------|------|-------|---------------|
   | EKS t3.small (2 nodes each) | \$24 | \$24 | \$48 |
-  | ALB | — | — | \$18 |
-  | ECR storage | — | — | \$4 |
+  | ALB | - | - | \$18 |
+  | ECR storage | - | - | \$4 |
   | **Grand total** | | | **\$70** |
 
   Tight budget? Use **Kubernetes horizontalPodAutoscaler** to scale BLUE to zero replicas ~5 min after cutover.
@@ -705,9 +705,9 @@ Remind me how "ArrayBuffer" works in JS?” beats tab-surfing MDN. Less context-
   },
   {
     slug: "observability-for-lean-teams",
-    title: "Logs, Metrics, Traces—Oh My! Observability That Matters!!",
+    title: "Logs, Metrics, Traces-Oh My! Observability That Matters!!",
     description:
-      "You don’t need an SRE army to see inside your stack. Here’s a pragmatic roadmap—from zero to ‘why is this query slow?’—that fits startups like yours.",
+      "You don’t need an SRE army to see inside your stack. Here’s a pragmatic roadmap-from zero to ‘why is this query slow?’-that fits startups like yours.",
     date: "2024-08-19",
     author: "Parth Shah",
     tags: ["Observability", "Monitoring", "Startups"],
@@ -717,7 +717,7 @@ Remind me how "ArrayBuffer" works in JS?” beats tab-surfing MDN. Less context-
     content: dedent(`
   ## Why “It Works on Prod” Isn’t Funny Anymore
 
-  When your entire company fits on a Zoom grid, the pager often routes straight to the developer who wrote the code. Good observability means you fix bugs at 2 AM *without* a crystal ball—or better yet, you spot them before users do.
+  When your entire company fits on a Zoom grid, the pager often routes straight to the developer who wrote the code. Good observability means you fix bugs at 2 AM *without* a crystal ball-or better yet, you spot them before users do.
 
   ---
 
@@ -729,7 +729,7 @@ Remind me how "ArrayBuffer" works in JS?” beats tab-surfing MDN. Less context-
   | **Logs**    | Loki (Grafana Cloud)        | Sprint 2: debug traces |
   | **Traces**  | OpenTelemetry → Tempo       | After you hit micro-service count ≥ 3 |
 
-  > If money is tight, start with **Prometheus + Grafana Cloud free tier**—you get 10 k series and alerts out of the box.
+  > If money is tight, start with **Prometheus + Grafana Cloud free tier**-you get 10 k series and alerts out of the box.
 
   ---
 
@@ -796,7 +796,7 @@ Remind me how "ArrayBuffer" works in JS?” beats tab-surfing MDN. Less context-
 
   ## 3 | Add Traces When Logs Aren’t Enough
 
-  OpenTelemetry Java agent—no code change:
+  OpenTelemetry Java agent-no code change:
 
   \`\`\`bash
   java -javaagent:opentelemetry-javaagent.jar \
@@ -847,7 +847,7 @@ Remind me how "ArrayBuffer" works in JS?” beats tab-surfing MDN. Less context-
 
   * Start with **metrics + alerts** today; add logs and traces as your service map grows.  
   * Alert only on **user-facing SLIs**; silence the noisy CPU charts.  
-  * Keep dashboards minimal—engineers remember pictures, not 42 graphs.  
+  * Keep dashboards minimal-engineers remember pictures, not 42 graphs.  
   * Observability is *insurance* for lean teams: small investment now, big payout when prod burns.
 
   > Your future self at 2 AM will thank you for every histogram bucket you add today.

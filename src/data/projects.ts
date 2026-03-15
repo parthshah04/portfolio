@@ -221,7 +221,7 @@ export const projects = [
   /* ---------------------------------------------------------- */
   {
     slug: "enlock-file-locker",
-    title: "EnLock — Encrypter Locker",
+    title: "EnLock - Encrypter Locker",
     description:
       "A secure, distributed file locker offering bank-grade encryption, seamless failover, and real-time access across redundant storage nodes.",
     role: "Backend Engineer",
@@ -317,9 +317,9 @@ export const projects = [
   /* ---------------------------------------------------------- */
   {
     slug: "destinotion-travel-pwa",
-    title: "Destinotion — Travel-Planning PWA",
+    title: "Destinotion - Travel-Planning PWA",
     description:
-      "A lightweight Next.js app that lets travelers discover, tag, and organize dream destinations—all running client-side using file-based storage.",
+      "A lightweight Next.js app that lets travelers discover, tag, and organize dream destinations-all running client-side using file-based storage.",
     role: "Solo Developer",
     year: "2025",
     tech: ["Next.js", "Tailwind CSS", "React-Hook-Form", "React Context API", "Vercel"],
@@ -417,7 +417,7 @@ export const projects = [
   /* ---------------------------------------------------------- */
   {
     slug: "osteo-vision-android",
-    title: "Osteo-Vision — Android App",
+    title: "Osteo-Vision - Android App",
     description:
       "An on-device osteoporosis detection app that processes X-ray images and form inputs using a hybrid deep learning model, with no cloud dependency or persistent storage.",
     role: "Machine Learning Engineer",
@@ -438,7 +438,7 @@ export const projects = [
       "User inputs tabular health data via a form and uploads X-ray image",
       "TFLite-quantized VGG-19 model extracts image features on-device",
       "Combined prediction from CNN (image) and XGBoost (form data)",
-      "No database or cloud connection—results computed instantly",
+      "No database or cloud connection-results computed instantly",
       "Material Design UI with multilingual support (EN, ES, FR)"
     ],
     challenges: [
@@ -450,7 +450,7 @@ export const projects = [
     solutions: [
       "Optimized TFLite model with NNAPI delegate for hardware acceleration",
       "Feature fusion of CNN embeddings and form vectors for XGBoost",
-      "Processed everything on-device—no images or data ever stored",
+      "Processed everything on-device-no images or data ever stored",
       "Used Android resource bundles and string localization for language support"
     ],
     results: [

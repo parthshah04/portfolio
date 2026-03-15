@@ -72,5 +72,5 @@
   </g>
   
   <!-- Note -->
-  <text x="450" y="580" text-anchor="middle" font-family="Arial" font-size="12" font-style="italic" fill="#6B7280">*Works the same on Cloud Run, Fly.io, or bare-metal K8s—just replace ALB with your load balancer.</text>
+  <text x="450" y="580" text-anchor="middle" font-family="Arial" font-size="12" font-style="italic" fill="#6B7280">*Works the same on Cloud Run, Fly.io, or bare-metal K8s-just replace ALB with your load balancer.</text>
 </svg>
