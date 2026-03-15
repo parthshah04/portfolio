@@ -4,6 +4,33 @@ import { motion } from "framer-motion"
 import { Briefcase } from "lucide-react"
 
 const experiences = [
+    {
+    title: "Quality Assurance Analyst (AI-based Apps)",
+    company: "Accenture",
+    period: "St. Catharines, ON    Nov 2025 – Present",
+    description: (
+      <ul className="list-disc pl-5 space-y-1">
+        <li>Selected as a pilot resource for a newly launched AI-based App Review program, supporting delivery readiness and operational excellence in a high-visibility initiative.</li>
+        <li>Executed complex policy and risk evaluations across AI-based applications, ensuring compliance with privacy, security, and platform governance standards.</li>
+        <li>Drafted and refined operational workflows to improve review consistency, turnaround time, and overall quality outcomes.</li>
+        <li>Analyzed recurring issues and performance trends, escalating insights that supported process optimization and continuous improvement initiatives.</li>
+        <li>Produced structured documentation and feedback to support audits, reporting, and cross-team stakeholder communication.</li>
+      </ul>
+    ),
+  },
+  {
+    title: "Trust and Safety Representative",
+    company: "Accenture",
+    period: "St. Catharines, ON    Oct 2025 – Nov 2025",
+    description: (
+      <ul className="list-disc pl-5 space-y-1">
+        <li>Delivered Trust & Safety operations aligned with defined SLAs, quality metrics, and service delivery standards for a large AI client.</li>
+        <li>Performed manual and AI-assisted content moderation, enforcing platform policies across abusive, fraudulent, and policy-violating content.</li>
+        <li>Reviewed escalations and edge cases, applying judgment-based decision-making aligned with evolving platform policies.</li>
+        <li>Maintained strict PII handling, confidentiality, and compliance standards while navigating multiple internal tools and signals.</li>
+      </ul>
+    ),
+  },
   {
     title: "Backend Developer",
     company: "Expense Trend",
